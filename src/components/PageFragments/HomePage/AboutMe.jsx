@@ -5,35 +5,35 @@ import { stripTags, domHtml } from '../../../utils/stripTags';
 
 import SEO from '../../Seo';
 
-const pageText = {
-  paraOne: `Hello !! My name is Rolwin Reevan Monteiro. I'm a full stack web developer who is
-    passionate about various web technologies. I like to experiment with different web
-    technologies. I have an experience of 3+ years working with LAMP stack, MERN stack
-    and ELK stack. Building fancy UI's just like this one that your seeing 😅 and writing blogs about tech stacks
-    is what Rolwin loves to do. Check my blog which I update every week for some Javascript and some
-    cool notes on web technologies.`,
-  paraTwo: `Currently I work mostly with Javascript technologies like ReactJS and NodeJS. I also
-    have hands on experience working with cloud infrastructures like <b>AWS/GCP</b> and have deployed applications
-    keeping scalability in mind. Docker, Kubernetes, Jenkins, SonarQube are some of the cool
-    tools I use for <b>CI/ CD</b>. I'm always a learner and a self taught programmer.`,
-};
+const pageText = [
+  `Hi! I'm George, a software engineer currently in my third year of Computer Engineering @ Queen's University.`,
+  `In 2019, I was awarded the Schulich Leaders scholarship, Canada's biggest and most prestigious STEM scholarship.
+   I am most passionate about developing integrated solutions to solve existing problems in the world today.`,
+  `Previously, I have interned at Genesys - a leader in the Contact Centre as a Service (CCaaS) space creating software
+   to analyze and improve millions of customer experiences around the world.
+   I also interned as an automation developer at Fleet Complete - a company providing telematic tracking and fleet
+   management software for trucks.`,
+  `Looking forward, I am extremely passionate about the intersection between business and technology, especially in the
+   FinTech space. Personal finance has always been one of my passions and one of my future goals is to create tech in order
+   to educate students and young adults about financial literacy.`
+];
 
 const AboutMe = () => {
-  const description = `${pageText.paraOne} ${stripTags(pageText.paraTwo)}`;
   return (
     <>
       <div>
         <SEO
           title="About"
-          description={description}
+          description="About George"
           path=""
           keywords={['George', 'Trieu', 'Software Engineer', 'Javascript', 'ReactJS', 'NodeJS']}
         />
         <h1 className="titleSeparate">About Me</h1>
-        <p>
-          {pageText.paraOne}
-        </p>
-        <p dangerouslySetInnerHTML={domHtml(pageText.paraTwo)} />
+        {
+          pageText.map((para) => (
+            <p>{para}</p>
+          ))
+        }
         <h1 className="titleSeparate">Work Experience</h1>
       </div>
       <Row gutter={[20, 20]}>
