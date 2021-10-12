@@ -27,66 +27,54 @@ const AboutMe = () => {
           title="About"
           description={description}
           path=""
-          keywords={['Rolwin', 'Reevan', 'Monteiro', 'FullStack developer', 'Javascript', 'ReactJS', 'NodeJS', 'Gatsby']}
+          keywords={['George', 'Trieu', 'Software Engineer', 'Javascript', 'ReactJS', 'NodeJS']}
         />
         <h1 className="titleSeparate">About Me</h1>
         <p>
           {pageText.paraOne}
         </p>
         <p dangerouslySetInnerHTML={domHtml(pageText.paraTwo)} />
+        <h1 className="titleSeparate">Work Experience</h1>
       </div>
       <Row gutter={[20, 20]}>
         <Col xs={24} sm={24} md={12} lg={8}>
           <AboutTile
-            img="location.png"
+            img="amazon.png"
             height={60}
-            alt="location image"
-            textH4="Born and bought up in"
-            textH3="Mangalore, KA, India"
+            alt="Amazon Logo"
+            textH4="Incoming Software Engineering Intern"
+            textH3="Amazon"
+            date="Expected Summer 2022"
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={8}>
           <AboutTile
-            img="coffee.png"
-            alt="coffee image"
-            textH4="Love Coffee"
-            textH3="Coffee + Me = Happiness"
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={8}>
-          <AboutTile
-            img="meeting.png"
-            alt="meeting image"
-            textH4="Socially Awkward"
-            textH3="At times"
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={8}>
-          <AboutTile
-            img="motorcycle.png"
-            alt="motorcycle image"
-            textH4="Love Riding"
-            textH3="Biker for life"
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={8}>
-          <AboutTile
-            img="web.png"
-            alt="web image"
-            textH4="Self Taught Programmer"
-            textH3="Thanks to the Web Resources"
+            img="genesys.png"
             height={60}
-            width={60}
+            alt="Genesys Logo"
+            textH4="Software Engineering Intern"
+            textH3="Genesys"
+            date="May 2021 - August 2021"
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={8}>
           <AboutTile
-            img="graduation.png"
-            alt="graduation image"
-            textH4="Pursued B.Tech in"
-            textH3="Computer Science"
+            img="genesys.png"
             height={60}
-            width={60}
+            alt="Genesys Logo"
+            textH4="Software Engineering Intern"
+            textH3="Genesys"
+            date="May 2020 - August 2020"
+          />
+        </Col>
+        <Col xs={24} sm={24} md={12} lg={8}>
+          <AboutTile
+            img="fleetcomplete.png"
+            height={60}
+            alt="Fleet Complete Logo"
+            textH4="Automation Developer Intern"
+            textH3="Fleet Complete"
+            date="July 2019 - August 2019"
           />
         </Col>
       </Row>
